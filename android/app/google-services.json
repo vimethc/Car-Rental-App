@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "416495178467",
+    "project_id": "chamii-car-rental",
+    "storage_bucket": "chamii-car-rental.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416495178467:android:a9e73b27378949a4cf6bd6",
+        "android_client_info": {
+          "package_name": "com.example.car_rental_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZTFUfC4Be72OGdm-rhHrYKufG8IXKFos"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
