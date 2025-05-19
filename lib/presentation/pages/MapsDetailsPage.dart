@@ -26,8 +26,8 @@ class MapsDetailsPage extends StatelessWidget {
               center: LatLng(51, -0.09),
               zoom: 13
             ),
-            layers: [
-              TileLayerOptions(
+            children: [
+              TileLayer(
                 urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 subdomains: ['a','b','c']
               )
@@ -67,7 +67,7 @@ Widget carDetailsCard({required Car car}) {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 20,),
-              Text('${car.model}', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),),
+              Text(car.model, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),),
               SizedBox(height: 10,),
               Row(
                 children: [
@@ -81,7 +81,7 @@ Widget carDetailsCard({required Car car}) {
                   Icon(Icons.battery_full, color: Colors.white, size: 14,),
                   SizedBox(width: 5,),
                   Text(
-                    '${car.fuelCapacity.toString()}',
+                    car.fuelCapacity.toString(),
                     style: TextStyle(color: Colors.white, fontSize: 14),
                   ),
                 ],

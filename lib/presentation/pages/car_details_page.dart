@@ -122,11 +122,11 @@ class _CardDetailsPageState extends State<CardDetailsPage> with SingleTickerProv
             padding: EdgeInsets.all(20),
             child: Column(
               children: [
-                MoreCard(car: Car(model: widget.car.model+"-1", distance: widget.car.distance+100, fuelCapacity: widget.car.fuelCapacity+100, pricePerHour: widget.car.pricePerHour+10)),
+                MoreCard(car: Car(model: "${widget.car.model}-1", distance: widget.car.distance+100, fuelCapacity: widget.car.fuelCapacity+100, pricePerHour: widget.car.pricePerHour+10)),
                 SizedBox(height: 5,),
-                MoreCard(car: Car(model: widget.car.model+"-2", distance: widget.car.distance+200, fuelCapacity: widget.car.fuelCapacity+200, pricePerHour: widget.car.pricePerHour+20)),
+                MoreCard(car: Car(model: "${widget.car.model}-2", distance: widget.car.distance+200, fuelCapacity: widget.car.fuelCapacity+200, pricePerHour: widget.car.pricePerHour+20)),
                 SizedBox(height: 5,),
-                MoreCard(car: Car(model: widget.car.model+"-3", distance: widget.car.distance+300, fuelCapacity: widget.car.fuelCapacity+300, pricePerHour: widget.car.pricePerHour+30)),
+                MoreCard(car: Car(model: "${widget.car.model}-3", distance: widget.car.distance+300, fuelCapacity: widget.car.fuelCapacity+300, pricePerHour: widget.car.pricePerHour+30)),
               ],
             ),
           )

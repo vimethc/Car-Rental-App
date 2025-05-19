@@ -23,6 +23,6 @@ void initInjection(){
     getIt.registerFactory(() => CarBloc(getCars: getIt<GetCars>()));
 
   } catch (e){
-    throw e;
+    rethrow;
   }
 }

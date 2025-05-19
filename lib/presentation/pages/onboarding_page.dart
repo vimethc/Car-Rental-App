@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:car_rental_app/presentation/pages/car_list_screen.dart';
 
 class OnboardingPage extends StatelessWidget {
-  const OnboardingPage({Key? key}) : super(key: key);
+  const OnboardingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
