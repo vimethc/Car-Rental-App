@@ -23,8 +23,8 @@ class MapsDetailsPage extends StatelessWidget {
         children: [
           FlutterMap(
             options: MapOptions(
-              center: LatLng(51, -0.09),
-              zoom: 13
+              center: LatLng(6.9271, 79.8612),
+              zoom: 14
             ),
             children: [
               TileLayer(
