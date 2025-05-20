@@ -35,10 +35,10 @@ dependencies:
   firebase_core: ^3.13.0
   cloud_firestore: ^5.6.7
   # firebase_auth: ^4.19.5
-  flutter_map: ^4.0.0
+  flutter_map: ^8.1.1
   # flutter_map: ^2.0.0
   # latlong2: ^0.8.0
-  latlong2: ^0.8.0
+  latlong2: ^0.9.1 
   bloc: ^8.0.0
   flutter_bloc: ^8.1.6
   get_it: ^7.6.7
