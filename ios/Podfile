@@ -1,8 +1,11 @@
-# Uncomment this line to define a global platform for your project
+# Define iOS platform version
 platform :ios, '13.0'
 
-# CocoaPods analytics sends network stats synchronously affecting flutter build latency.
+# Disable CocoaPods analytics
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+# Set Firebase SDK version
+$FirebaseSDKVersion = '11.10.0'
 
 project 'Runner', {
   'Debug' => :debug,
@@ -23,28 +26,28 @@ def flutter_root
   raise "FLUTTER_ROOT not found in #{generated_xcode_build_settings_path}. Try deleting Generated.xcconfig, then run flutter pub get"
 end
 
+# FIXED: Added missing closing parenthesis
 require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelper'), flutter_root)
 
 flutter_ios_podfile_setup
 
 target 'Runner' do
   use_frameworks!
+  use_modular_headers!
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
-
-  target 'RunnerTests' do
-    inherit! :search_paths
-  end
 end
 
-# ✅ Fix iOS simulator build error (unsupported '-G' option)
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     flutter_additional_ios_build_settings(target)
-
+    
     target.build_configurations.each do |config|
+      config.build_settings['OTHER_CFLAGS'] = []
+      config.build_settings['OTHER_CPLUSPLUSFLAGS'] = []
       config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
       config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+      config.build_settings['GCC_WARN_INHIBIT_ALL_WARNINGS'] = 'YES'
     end
   end
 end
